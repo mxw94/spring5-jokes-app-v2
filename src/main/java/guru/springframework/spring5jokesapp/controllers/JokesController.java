@@ -13,7 +13,7 @@ public class JokesController {
         this.jokesService = jokesService;
     }
 
-    @RequestMapping("/")
+    @RequestMapping({"/", ""})
     public String getJoke(Model model) {
         model.addAttribute("joke", jokesService.getChuckNorrisQuote());
         return "index";
